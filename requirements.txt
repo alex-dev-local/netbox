@@ -28,3 +28,6 @@ tablib==3.1.0
 
 # Workaround for #7401
 jsonschema==3.2.0
+
+# Des
+django-des==2.4.1
