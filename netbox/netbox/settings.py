@@ -294,6 +294,7 @@ EMAIL_USE_SSL = EMAIL.get('USE_SSL', False)
 EMAIL_USE_TLS = EMAIL.get('USE_TLS', False)
 EMAIL_TIMEOUT = EMAIL.get('TIMEOUT', 10)
 SERVER_EMAIL = EMAIL.get('FROM_EMAIL')
+EMAIL_BACKEND = 'des.backends.ConfiguredEmailBackend'
 
 
 #
@@ -329,6 +330,7 @@ INSTALLED_APPS = [
     'virtualization',
     'django_rq',  # Must come after extras to allow overriding management commands
     'drf_yasg',
+    'des',
 ]
 
 # Middleware

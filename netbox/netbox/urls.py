@@ -13,6 +13,7 @@ from netbox.graphql.views import GraphQLView
 from netbox.views import HomeView, StaticMediaFailureView, SearchView
 from users.views import LoginView, LogoutView
 from .admin import admin_site
+from des import urls as des_urls
 
 
 openapi_info = openapi.Info(
@@ -78,6 +79,9 @@ _patterns = [
     path('admin/background-tasks/', include('django_rq.urls')),
     path('admin/plugins/', include(plugin_admin_patterns)),
     path('admin/', admin_site.urls),
+
+    # Des
+    path('django-des/', include(des_urls)),
 ]
 
 
